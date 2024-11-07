@@ -18,7 +18,7 @@ nav {
 
 }
 
-header {}
+
 
 
 
@@ -33,21 +33,25 @@ h1 {
 nav>ul {
  display: flex;
  align-items: center;
-
+ text-decoration: none;
+ 
 }
 
 nav li {
+ text-decoration: none;
  list-style: none;
  margin-right: 50px;
 
 }
 
 a {
- color: #000000;
- background-color: aqua;
- border: solid;
- border-radius: 5px;
+ text-decoration: none;
+ background-color: springgreen;
+ padding: 10px 10px 10px;
+ border: solid wheat;
+
 }
+
 
 .banner {
  background-image: url('../resources/Banner\ Image.png');
@@ -59,17 +63,16 @@ a {
 
 .banner-title {
 
-font-family: "Roboto", sans-serif;
-font-weight: 400;
-font-size: 40px;
-line-height: normal;
-text-align: center;
-color: #ffffff;
-
-
+ font-family: "Roboto", sans-serif;
+ font-weight: 400;
+ font-size: 40px;
+ line-height: normal;
+ text-align: center;
+ color: #ffffff;
 
 }
-.banner-subtitle{
+
+.banner-subtitle {
  font-size: 70px;
  color: #ffffff;
  text-align: center;
@@ -78,13 +81,98 @@ color: #ffffff;
  flex-direction: column;
  align-items: center;
  justify-content: center;
- 
+
 }
-.banner-content{
+
+.banner-content {
  height: 100%;
  width: 100%;
- background-image: linear-gradient(to bottom, rgba(7, 2, 17, 0.5)
- , rgba(7, 2, 17, 0.1)
- );
+ background-image: linear-gradient(to bottom, rgba(7, 2, 17, 0.5), rgba(7, 2, 17, 0.1));
+}
+
+.text {
+ text-align: center;
+ font-weight: bold;
+ color: red;
+ margin-bottom: 50px;
+
+}
+
+.text2 {
+ text-align: center;
+ font-size: xx-large;
+ font-weight: bolder;
+ margin-bottom: 50px;
+}
+
+.off {
+ color: red;
+ font-size: 100px;
+ text-align: center;
+ margin-top: 100px;
+
+}
+
+.second-image {
+ text-align: center;
+
+}
+
+
+
+.image-container {
+
+ background-image: url('../resources/Vectorrr.png');
+ height: 600px;
+ width: 1320px;
+ margin: 100px auto;
+ text-shadow: #FFFFFF;
+}
+
+.image-text {
+ font-size: 50px;
+ color: #FFFFFF;
+ text-align: center;
+}
+
+.p-text {
+ text-align: center;
+ color: #FFFFFF;
+ font-size: 20px;
+ font: 1.5em sans-serif;
+}
+
+.pic {
  
+ margin-left: 600px;
+ border: brown solid;
+ padding: 10px;
+ 
+ width: 1320px;
+ height: 482px;
+ background-image: linear-gradient(to bottom, rgba(555, 0, 0, 0.5), rgba(81, 113, 116, 0
+ ));
+}
+.font {
+ 
+
+ justify-content: space-between;
+
+
+ font-size: 52px; 
+
+ text-align: center;
+ text-transform: capitalize;
+}
+.button{
+ margin-left: 500px ;
+ justify-content: space-between;
+ border-radius: 5px;
+ background: red;
+ border: 0 ;
+ color: white;
+ font-size: 20px;
+ font-style: normal;
+ font-weight: 100;
+ padding: 25px 45px 
 }
