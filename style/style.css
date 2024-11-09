@@ -5,52 +5,101 @@ body {
  background-color: #FFFFFF;
 }
 
-.navbar {
- display: flex;
- justify-content: space-between;
- align-items: center;
-
-}
-
 nav {
- display: flex;
- justify-content: flex-end;
+ margin: auto;
+ padding: auto;
+ margin-left: 1600px;
+ padding:.3125em;        
+ 
+ background-color: #222;
+ 
+ width: 20%;
+ box-shadow: 0 2px 10px rgba(0, 255, 255, 0.2);
+ z-index: 100;
+
 
 }
 
 
 
+.li>a {
+ margin: auto;
+ padding: auto;
+ text-align: center;
+ color: #fff;
+ text-decoration: none;
+ font-size: 30px;
+ padding: 10px 10px 10px;
+ border-radius: 5px  ;
+ transition: all 0.3s ease;
 
 
+}
+/* Glowing effect on hover */
+nav a:hover {
+ color: #00FFFF;
+ box-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 25px rgba(0, 255, 255, 0.7);
+ transform: scale(1.05);
+}
+nav a::after {
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 3px;
+ background-color: #00FFFF;
+ bottom: 0;
+ left: 0;
+ transform: scaleX(0);
+ transform-origin: bottom right;
+ transition: transform 0.3s ease-out;
+}
+
+nav a:hover::after {
+ transform: scaleX(1);
+ transform-origin: bottom left;
+}
+@keyframes glow {
+ 0% {
+   box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+ }
+ 50% {
+   box-shadow: 0 0 10px rgba(0, 255, 255, 1);
+ }
+ 100% {
+   box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+ }
+}
+nav a {
+ animation: glow 2s infinite alternate;
+}
 
 h1 {
- margin-top: 1.0em;
-}
+ margin-top: 0.0em;
+ padding:.3125em;        /* Changes the padding to make the hover effect bigger */
+    margin-right:1.2em;
 
-
-
-
-nav>ul {
- display: flex;
- align-items: center;
- text-decoration: none;
+ font-size: 50px;
+ color: rgb(5, 4, 44);
  
-}
-
-nav li {
- text-decoration: none;
- list-style: none;
- margin-right: 50px;
+ text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.6);
+ animation: glowing-text 1.5s ease-in-out infinite;
 
 }
 
-a {
- text-decoration: none;
- background-color: springgreen;
- padding: 10px 10px 10px;
- border: solid wheat;
+@keyframes glowing-text {
+ 0% {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.6);
+ }
 
+ 50% {
+  text-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 1), 0 0 50px rgba(0, 255, 255, 1);
+ }
+
+ 100% {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.6);
+ }
 }
+
 
 
 .banner {
@@ -63,6 +112,11 @@ a {
 
 .banner-title {
 
+ font-size: 50px;
+ color: rgb(5, 4, 44);
+ text-align: center;
+ text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.6);
+ animation: glowing-text 1.5s ease-in-out infinite;
  font-family: "Roboto", sans-serif;
  font-weight: 400;
  font-size: 40px;
@@ -73,6 +127,11 @@ a {
 }
 
 .banner-subtitle {
+ font-size: 50px;
+ color: rgb(5, 4, 44);
+ text-align: center;
+ text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.6);
+ animation: glowing-text 1.5s ease-in-out infinite;
  font-size: 70px;
  color: #ffffff;
  text-align: center;
@@ -91,6 +150,7 @@ a {
 }
 
 .text {
+
  text-align: center;
  font-weight: bold;
  color: red;
@@ -131,6 +191,11 @@ a {
 
 .image-text {
  font-size: 50px;
+ color: rgb(5, 4, 44);
+ text-align: center;
+ text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.6);
+ animation: glowing-text 1.5s ease-in-out infinite;
+ font-size: 50px;
  color: #FFFFFF;
  text-align: center;
 }
@@ -143,36 +208,165 @@ a {
 }
 
 .pic {
- 
- margin-left: 600px;
- border: brown solid;
- padding: 10px;
- 
+color: rgb(87, 78, 78);
+ font-family: inherit;
+font-weight: 600;
+font-size: 32px;
+line-height: 56px;
+text-align: center;
+text-transform: capitalize;
+ margin: auto;
+ padding: auto;
+ border: red;
  width: 1320px;
  height: 482px;
- background-image: linear-gradient(to bottom, rgba(555, 0, 0, 0.5), rgba(81, 113, 116, 0
- ));
+ background-image: linear-gradient(to bottom, rgba(455, 0, 0, 0.5), rgba(81, 113, 116, 0));
 }
+
 .font {
- 
+
 
  justify-content: space-between;
 
 
- font-size: 52px; 
+ font-size: 52px;
 
  text-align: center;
  text-transform: capitalize;
 }
-.button{
- margin-left: 500px ;
- justify-content: space-between;
+
+.button {
+ padding: auto;
+ font-family: Arial, sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 80px;
+ width: 200px;
+ margin: auto;
+ background-color: #333;
+}
+
+.button {
+ padding: 15px 30px;
+ font-size: 18px;
+ font-weight: bold;
+ color: #fff;
+ background-color: #ff0000;
+ border: none;
  border-radius: 5px;
- background: red;
- border: 0 ;
- color: white;
- font-size: 20px;
- font-style: normal;
- font-weight: 100;
- padding: 25px 45px 
+ cursor: pointer;
+ position: relative;
+ outline: none;
+ box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+ transition: all 0.3s ease;
+}
+
+.button:hover {
+ box-shadow: 0 0 20px rgba(0, 123, 255, 0.8), 0 0 30px rgba(0, 123, 255, 0.6);
+ transform: scale(1.1);
+}
+
+
+@keyframes glowing {
+ 0% {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.7), 0 0 10px rgba(0, 123, 255, 0.7);
+ }
+
+ 50% {
+  box-shadow: 0 0 15px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 1);
+ }
+
+ 100% {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.7), 0 0 10px rgba(0, 123, 255, 0.7);
+ }
+}
+
+.button {
+ animation: glowing 1.5s infinite alternate;
+}
+
+
+
+
+
+footer {
+ margin-top: 50px;
+ gap: 50px;
+ display: flex;
+ background: #FFF8F3;
+ padding: 120px 200px;
+}
+
+.footer-colum {
+ width: 50%;
+}
+
+.social-links a {
+ margin-right: 26px;
+
+
+}
+
+.section-title {
+ color: #181818;
+ text-align: center;
+ font-size: 35px;
+ font-weight: 700;
+}
+
+
+
+.contact input[type="text"],
+.contact input[type="email"],
+textarea {
+ display: block;
+ margin-bottom: 20px;
+ padding: 18px 35px;
+ color: #757575;
+ border-top: 5px;
+ background-color: #FFF;
+ border: 0;
+ width: 100%;
+
+
+}
+
+.holiday {
+ text-align: center;
+ padding: 200px 100px 200px;
+ margin: auto;
+
+}
+
+.holidays {
+ margin: ;
+ padding: auto;
+ font-family: "Inter", sans-serif;
+ font-weight: 900;
+ font-size: 72px;
+ line-height: normal;
+ text-align: center;
+ color: red;
+}
+.image-text-container {
+ 
+ text-align: center;
+ display: block;
+}
+
+/* Image styling */
+.image-text-container img {
+text-align: center;
+ margin: auto;
+}
+
+/* Text styling */
+.image-text-container  {
+ text-align: center;
+margin: auto;
+padding: auto;
+}
+.text-overlay {
+ text-align: center;
 }
